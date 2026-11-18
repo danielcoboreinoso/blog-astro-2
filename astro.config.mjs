@@ -12,20 +12,14 @@ export default defineConfig({
 	fonts: [
 		{
 			provider: fontProviders.local(),
-			name: 'Atkinson',
-			cssVariable: '--font-atkinson',
+			name: 'Manrope',
+			cssVariable: '--font-manrope',
 			fallbacks: ['sans-serif'],
 			options: {
 				variants: [
 					{
-						src: ['./src/assets/fonts/atkinson-regular.woff'],
-						weight: 400,
-						style: 'normal',
-						display: 'swap',
-					},
-					{
-						src: ['./src/assets/fonts/atkinson-bold.woff'],
-						weight: 700,
+						src: ['./src/assets/fonts/manrope-variable.woff2'],
+						weight: '400 800',
 						style: 'normal',
 						display: 'swap',
 					},
