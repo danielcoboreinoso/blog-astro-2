@@ -1,15 +1,15 @@
 ---
-title: 'Markdown Style Guide'
-description: 'Here is a sample of some basic Markdown syntax that can be used when writing Markdown content in Astro.'
-pubDate: 'Jun 19 2024'
+title: 'Guía de estilo Markdown'
+description: 'Ejemplos de la sintaxis básica de Markdown que puedes usar al escribir en Astro.'
+pubDate: 'Nov 12 2026'
 heroImage: '../../assets/blog-placeholder-1.jpg'
 ---
 
-Here is a sample of some basic Markdown syntax that can be used when writing Markdown content in Astro.
+Esta es una guía rápida con la sintaxis de Markdown que puedes usar en los artículos del blog.
 
-## Headings
+## Encabezados
 
-The following HTML `<h1>`—`<h6>` elements represent six levels of section headings. `<h1>` is the highest section level while `<h6>` is the lowest.
+Los elementos `<h1>` a `<h6>` representan seis niveles de encabezado. `<h1>` es el nivel más alto y `<h6>` el más bajo.
 
 # H1
 
@@ -23,192 +23,83 @@ The following HTML `<h1>`—`<h6>` elements represent six levels of section head
 
 ###### H6
 
-## Paragraph
+## Párrafo
 
-Xerum, quo qui aut unt expliquam qui dolut labo. Aque venitatiusda cum, voluptionse latur sitiae dolessi aut parist aut dollo enim qui voluptate ma dolestendit peritin re plis aut quas inctum laceat est volestemque commosa as cus endigna tectur, offic to cor sequas etum rerum idem sintibus eiur? Quianimin porecus evelectur, cum que nis nust voloribus ratem aut omnimi, sitatur? Quiatem. Nam, omnis sum am facea corem alique molestrunt et eos evelece arcillit ut aut eos eos nus, sin conecerem erum fuga. Ri oditatquam, ad quibus unda veliamenimin cusam et facea ipsamus es exerum sitate dolores editium rerore eost, temped molorro ratiae volorro te reribus dolorer sperchicium faceata tiustia prat.
+Un párrafo se escribe simplemente como texto. Si dejas una línea en blanco entre dos bloques, se convierten en párrafos separados. Puedes usar **negrita**, _cursiva_ y `código en línea` sin esfuerzo.
 
-Itatur? Quiatae cullecum rem ent aut odis in re eossequodi nonsequ idebis ne sapicia is sinveli squiatum, core et que aut hariosam ex eat.
+## Imágenes
 
-## Images
-
-### Syntax
+### Sintaxis
 
 ```markdown
-![Alt text](./full/or/relative/path/of/image)
+![Texto alternativo](./ruta/completa/o/relativa/de/la/imagen)
 ```
 
-### Output
+### Resultado
 
-![blog placeholder](../../assets/blog-placeholder-about.jpg)
+![imagen de ejemplo](../../assets/blog-placeholder-about.jpg)
 
-## Blockquotes
+## Citas
 
-The blockquote element represents content that is quoted from another source, optionally with a citation which must be within a `footer` or `cite` element, and optionally with in-line changes such as annotations and abbreviations.
+El elemento de cita representa contenido procedente de otra fuente:
 
-### Blockquote without attribution
+> No te comuniques compartiendo memoria, comparte memoria comunicándote.<br>
+> — <cite>Rob Pike</cite>
 
-#### Syntax
+También puedes usar Markdown dentro de una cita:
 
-```markdown
-> Tiam, ad mint andaepu dandae nostion secatur sequo quae.  
-> **Note** that you can use _Markdown syntax_ within a blockquote.
-```
+> **Importante**: las citas admiten _cursiva_, **negrita** y `código`.
 
-#### Output
+## Tablas
 
-> Tiam, ad mint andaepu dandae nostion secatur sequo quae.  
-> **Note** that you can use _Markdown syntax_ within a blockquote.
-
-### Blockquote with attribution
-
-#### Syntax
+### Sintaxis
 
 ```markdown
-> Don't communicate by sharing memory, share memory by communicating.<br>
-> — <cite>Rob Pike[^1]</cite>
-```
-
-#### Output
-
-> Don't communicate by sharing memory, share memory by communicating.<br>
-> — <cite>Rob Pike[^1]</cite>
-
-[^1]: The above quote is excerpted from Rob Pike's [talk](https://www.youtube.com/watch?v=PAAkCSZUG1c) during Gopherfest, November 18, 2015.
-
-## Tables
-
-### Syntax
-
-```markdown
-| Italics   | Bold     | Code   |
+| Cursiva   | Negrita  | Código |
 | --------- | -------- | ------ |
-| _italics_ | **bold** | `code` |
+| _cursiva_ | **negra** | `code` |
 ```
 
-### Output
+### Resultado
 
-| Italics   | Bold     | Code   |
+| Cursiva   | Negrita  | Código |
 | --------- | -------- | ------ |
-| _italics_ | **bold** | `code` |
+| _cursiva_ | **negra** | `code` |
 
-## Code Blocks
+## Bloques de código
 
-### Syntax
+Usa tres backticks para crear un bloque de código. Añadiendo el nombre del lenguaje después de los primeros backticks obtienes resaltado de sintaxis:
 
-we can use 3 backticks ``` in new line and write snippet and close with 3 backticks on new line and to highlight language specific syntax, write one word of language name after first 3 backticks, for eg. html, javascript, css, markdown, typescript, txt, bash
-
-````markdown
-```html
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Example HTML5 Document</title>
-  </head>
-  <body>
-    <p>Test</p>
-  </body>
-</html>
-```
-````
-
-### Output
-
-```html
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Example HTML5 Document</title>
-  </head>
-  <body>
-    <p>Test</p>
-  </body>
-</html>
+```js
+function saludar(nombre) {
+  console.log(`Hola, ${nombre}!`);
+}
 ```
 
-## List Types
+## Listas
 
-### Ordered List
+### Lista ordenada
 
-#### Syntax
+1. Primer elemento
+2. Segundo elemento
+3. Tercer elemento
 
-```markdown
-1. First item
-2. Second item
-3. Third item
-```
+### Lista sin ordenar
 
-#### Output
+- Elemento
+- Otro elemento
+- Y otro más
 
-1. First item
-2. Second item
-3. Third item
+### Lista anidada
 
-### Unordered List
+- Fruta
+  - Manzana
+  - Naranja
+  - Plátano
+- Lácteos
+  - Leche
+  - Queso
 
-#### Syntax
+## Otros elementos
 
-```markdown
-- List item
-- Another item
-- And another item
-```
-
-#### Output
-
-- List item
-- Another item
-- And another item
-
-### Nested list
-
-#### Syntax
-
-```markdown
-- Fruit
-  - Apple
-  - Orange
-  - Banana
-- Dairy
-  - Milk
-  - Cheese
-```
-
-#### Output
-
-- Fruit
-  - Apple
-  - Orange
-  - Banana
-- Dairy
-  - Milk
-  - Cheese
-
-## Other Elements — abbr, sub, sup, kbd, mark
-
-### Syntax
-
-```markdown
-<abbr title="Graphics Interchange Format">GIF</abbr> is a bitmap image format.
-
-H<sub>2</sub>O
-
-X<sup>n</sup> + Y<sup>n</sup> = Z<sup>n</sup>
-
-Press <kbd>CTRL</kbd> + <kbd>ALT</kbd> + <kbd>Delete</kbd> to end the session.
-
-Most <mark>salamanders</mark> are nocturnal, and hunt for insects, worms, and other small creatures.
-```
-
-### Output
-
-<abbr title="Graphics Interchange Format">GIF</abbr> is a bitmap image format.
-
-H<sub>2</sub>O
-
-X<sup>n</sup> + Y<sup>n</sup> = Z<sup>n</sup>
-
-Press <kbd>CTRL</kbd> + <kbd>ALT</kbd> + <kbd>Delete</kbd> to end the session.
-
-Most <mark>salamanders</mark> are nocturnal, and hunt for insects, worms, and other small creatures.
+Puedes usar HTML directamente cuando lo necesites: <abbr title="Graphics Interchange Format">GIF</abbr>, H<sub>2</sub>O, X<sup>n</sup>, <kbd>Ctrl</kbd> + <kbd>C</kbd> o <mark>texto resaltado</mark>.
