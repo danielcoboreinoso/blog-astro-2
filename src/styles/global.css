@@ -24,6 +24,19 @@ html {
 	scroll-behavior: smooth;
 }
 
+@media (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+
+	*,
+	*::before,
+	*::after {
+		transition: none !important;
+		animation: none !important;
+	}
+}
+
 body {
 	font-family: var(--font-manrope), system-ui, -apple-system, 'Segoe UI', sans-serif;
 	margin: 0;
@@ -50,6 +63,10 @@ main {
 	max-width: calc(100% - 2em);
 	margin: auto;
 	padding: 3em 1em 5em;
+}
+
+main:focus {
+	outline: none;
 }
 
 h1,

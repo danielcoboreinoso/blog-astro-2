@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://danielcoboreinoso.github.io/blog-astro-2/sitemap-index.xml

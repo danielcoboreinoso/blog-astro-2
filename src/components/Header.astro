@@ -4,6 +4,7 @@ import { withBase } from '../utils/paths';
 import HeaderLink from './HeaderLink.astro';
 ---
 
+<a href="#main" class="skip-link">Saltar al contenido</a>
 <header>
 	<nav>
 		<h2>
@@ -81,5 +82,24 @@ import HeaderLink from './HeaderLink.astro';
 		.social-links {
 			display: none;
 		}
+	}
+	.skip-link {
+		position: absolute;
+		left: 1em;
+		top: auto;
+		top: -4em;
+		z-index: 100;
+		padding: 0.75em 1.25em;
+		background-color: rgb(var(--black));
+		color: rgb(var(--gray-dark));
+		border-radius: 6px;
+		font-size: 0.95em;
+		font-weight: 600;
+		text-decoration: none;
+		transition: top 0.2s ease;
+	}
+	.skip-link:focus {
+		top: 1em;
+		color: rgb(var(--black));
 	}
 </style>

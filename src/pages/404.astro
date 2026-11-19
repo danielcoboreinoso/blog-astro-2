@@ -1,0 +1,13 @@
+---
+import Layout from '../layouts/Page.astro';
+import { withBase } from '../utils/paths';
+---
+
+<Layout title="Página no encontrada" description="La página que buscas no existe">
+	<h2>Página no encontrada</h2>
+	<p>La página que buscas no existe o se ha movido de lugar.</p>
+	<p>
+		Puedes volver al <a href={withBase('/')}>inicio</a> o explorar los
+		<a href={withBase('/blog')}>artículos del blog</a>.
+	</p>
+</Layout>

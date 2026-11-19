@@ -3,7 +3,9 @@ import rss from '@astrojs/rss';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 
 export async function GET(context) {
-	const posts = await getCollection('blog');
+	const posts = (await getCollection('blog')).sort(
+		(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+	);
 	const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 	return rss({
 		title: SITE_TITLE,
@@ -12,6 +14,7 @@ export async function GET(context) {
 		items: posts.map((post) => ({
 			...post.data,
 			link: `${base}/blog/${post.id}/`,
+			customData: '<language>es</language>',
 		})),
 	});
 }
