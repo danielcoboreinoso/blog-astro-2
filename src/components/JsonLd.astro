@@ -1,0 +1,13 @@
+---
+interface Props {
+	schema: Record<string, unknown>;
+}
+
+// Escapa los caracteres que podrían cerrar el <script> o alterar el HTML.
+const json = JSON.stringify(Astro.props.schema)
+	.replace(/</g, '\\u003c')
+	.replace(/>/g, '\\u003e')
+	.replace(/&/g, '\\u0026');
+---
+
+<script type="application/ld+json" is:inline set:html={json}></script>

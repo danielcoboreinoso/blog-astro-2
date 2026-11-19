@@ -6,15 +6,16 @@ import Header from '../components/Header.astro';
 interface Props {
 	title: string;
 	description: string;
+	profile?: boolean;
 }
 
-const { title, description } = Astro.props;
+const { title, description, profile = false } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="es">
 	<head>
-		<BaseHead title={title} description={description} />
+		<BaseHead title={title} description={description} profile={profile} />
 		<style>
 			.prose {
 				width: 720px;

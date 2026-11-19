@@ -4,3 +4,4 @@
 export const SITE_TITLE = 'El Blog de Daniel';
 export const SITE_DESCRIPTION = 'Artículos sobre desarrollo web, Astro, JavaScript y frontend';
 export const AUTHOR_NAME = 'Daniel Coboreinoso';
+export const AUTHOR_GITHUB = 'https://github.com/danielcoboreinoso';
